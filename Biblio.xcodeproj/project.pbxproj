@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2E91981AA0F80F00414E1F /* AuthentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E91971AA0F80F00414E1F /* AuthentificationViewController.m */; };
+		2E2E919C1AA0FA2F00414E1F /* CreationUtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E919B1AA0FA2F00414E1F /* CreationUtilisateurViewController.m */; };
+		2E2E91A11AA0FD6A00414E1F /* ConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E919F1AA0FD6A00414E1F /* ConnectionHelper.m */; };
 		2EF12B9B1AA0B5DD007249F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12B9A1AA0B5DD007249F5 /* main.m */; };
 		2EF12B9E1AA0B5DD007249F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12B9D1AA0B5DD007249F5 /* AppDelegate.m */; };
-		2EF12BA11AA0B5DD007249F5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12BA01AA0B5DD007249F5 /* ViewController.m */; };
 		2EF12BA41AA0B5DD007249F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EF12BA21AA0B5DD007249F5 /* Main.storyboard */; };
 		2EF12BA61AA0B5DD007249F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF12BA51AA0B5DD007249F5 /* Images.xcassets */; };
 		2EF12BA91AA0B5DD007249F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF12BA71AA0B5DD007249F5 /* LaunchScreen.xib */; };
@@ -27,13 +29,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2E91961AA0F80F00414E1F /* AuthentificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthentificationViewController.h; sourceTree = "<group>"; };
+		2E2E91971AA0F80F00414E1F /* AuthentificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthentificationViewController.m; sourceTree = "<group>"; };
+		2E2E919A1AA0FA2F00414E1F /* CreationUtilisateurViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreationUtilisateurViewController.h; sourceTree = "<group>"; };
+		2E2E919B1AA0FA2F00414E1F /* CreationUtilisateurViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreationUtilisateurViewController.m; sourceTree = "<group>"; };
+		2E2E919E1AA0FD6A00414E1F /* ConnectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelper.h; sourceTree = "<group>"; };
+		2E2E919F1AA0FD6A00414E1F /* ConnectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelper.m; sourceTree = "<group>"; };
+		2E2E91A01AA0FD6A00414E1F /* Constante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constante.h; sourceTree = "<group>"; };
 		2EF12B951AA0B5DD007249F5 /* Biblio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biblio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF12B991AA0B5DD007249F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF12B9A1AA0B5DD007249F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2EF12B9C1AA0B5DD007249F5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2EF12B9D1AA0B5DD007249F5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2EF12B9F1AA0B5DD007249F5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2EF12BA01AA0B5DD007249F5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		2EF12BA31AA0B5DD007249F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2EF12BA51AA0B5DD007249F5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2EF12BA81AA0B5DD007249F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -60,6 +67,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E2E91991AA0F81800414E1F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E2E91961AA0F80F00414E1F /* AuthentificationViewController.h */,
+				2E2E91971AA0F80F00414E1F /* AuthentificationViewController.m */,
+				2E2E919A1AA0FA2F00414E1F /* CreationUtilisateurViewController.h */,
+				2E2E919B1AA0FA2F00414E1F /* CreationUtilisateurViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E2E919D1AA0FD5600414E1F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2E2E919E1AA0FD6A00414E1F /* ConnectionHelper.h */,
+				2E2E919F1AA0FD6A00414E1F /* ConnectionHelper.m */,
+				2E2E91A01AA0FD6A00414E1F /* Constante.h */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		2EF12B8C1AA0B5DD007249F5 = {
 			isa = PBXGroup;
 			children = (
@@ -83,8 +111,8 @@
 			children = (
 				2EF12B9C1AA0B5DD007249F5 /* AppDelegate.h */,
 				2EF12B9D1AA0B5DD007249F5 /* AppDelegate.m */,
-				2EF12B9F1AA0B5DD007249F5 /* ViewController.h */,
-				2EF12BA01AA0B5DD007249F5 /* ViewController.m */,
+				2E2E919D1AA0FD5600414E1F /* Tools */,
+				2E2E91991AA0F81800414E1F /* Views */,
 				2EF12BA21AA0B5DD007249F5 /* Main.storyboard */,
 				2EF12BA51AA0B5DD007249F5 /* Images.xcassets */,
 				2EF12BA71AA0B5DD007249F5 /* LaunchScreen.xib */,
@@ -219,9 +247,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EF12BA11AA0B5DD007249F5 /* ViewController.m in Sources */,
+				2E2E919C1AA0FA2F00414E1F /* CreationUtilisateurViewController.m in Sources */,
 				2EF12B9E1AA0B5DD007249F5 /* AppDelegate.m in Sources */,
+				2E2E91981AA0F80F00414E1F /* AuthentificationViewController.m in Sources */,
 				2EF12B9B1AA0B5DD007249F5 /* main.m in Sources */,
+				2E2E91A11AA0FD6A00414E1F /* ConnectionHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +444,7 @@
 				2EF12BBA1AA0B5DD007249F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2EF12BBB1AA0B5DD007249F5 /* Build configuration list for PBXNativeTarget "BiblioTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +453,7 @@
 				2EF12BBD1AA0B5DD007249F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
