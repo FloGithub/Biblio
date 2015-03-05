@@ -10,6 +10,8 @@
 
 #import "AuthentificationViewController.h"
 #import "Constante.h"
+#import "Authent.h"
+#import "ConnectionHelper.h"
 
 @interface AuthentificationViewController (){
     IBOutlet UILabel * ident ;
@@ -55,9 +57,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)authentUser:(NSString*)login withPass:(NSString*)pass{
+- (void)authentUser {
+    Authent * authent = [[Authent alloc]init];
+    authent.login = champlogin.text;
+    authent.pass = champpass.text;
+    
+    NSDictionary * dico = @ {@"login":authent.login, @"pass":authent.pass};
+    
+    NSError * error ;
+    NSData * dataToSend = [NSJSONSerialization dataWithJSONObject:dico options:NSUTF8StringEncoding error:&error];
+    
+    
     // initialisation de l'URL qui va etre appelée.
-    NSURL * url=[NSURL URLWithString:[NSString stringWithFormat:@"%@/authent", kAdressServer]];
+    NSURL * url=[NSURL URLWithString:[NSString stringWithFormat:@"%@/user", kAdressServer]];
     // initialisation de la requète d'appel du serveur
     NSMutableURLRequest * request= [NSMutableURLRequest requestWithURL:url];
     // définition du type de méthode envoyée
@@ -65,8 +77,25 @@
     // ajout des headers à la requète
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"Basic aXNmYTppc2ZhMjAxNQ==" forHTTPHeaderField:@"Authorization"];
+    [request setHTTPBody:dataToSend];
     
+    ConnectionHelper * connection = [[ConnectionHelper alloc] initWithRequest:request];
     
+    [connection setSuccessBlock:^{
+        NSLog(@"OK!");
+    }];
+    
+    [connection setFailureBlock:^{
+        NSLog(@"KO!");
+    }];
+    
+    [connection start];
+    
+}
+
+- (IBAction)temp:(id)sender{
+    [self authentUser];
 }
 
 - (void) receiveTestNotification:(NSNotification *) notification {

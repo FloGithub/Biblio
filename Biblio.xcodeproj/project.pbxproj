@@ -10,6 +10,7 @@
 		2E2E91981AA0F80F00414E1F /* AuthentificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E91971AA0F80F00414E1F /* AuthentificationViewController.m */; };
 		2E2E919C1AA0FA2F00414E1F /* CreationUtilisateurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E919B1AA0FA2F00414E1F /* CreationUtilisateurViewController.m */; };
 		2E2E91A11AA0FD6A00414E1F /* ConnectionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E919F1AA0FD6A00414E1F /* ConnectionHelper.m */; };
+		2E65BA641AA89AFD00617E50 /* Authent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E65BA631AA89AFD00617E50 /* Authent.m */; };
 		2EEDCAE71AA86D78006E93A5 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEDCAE61AA86D78006E93A5 /* DemoViewController.m */; };
 		2EF12B9B1AA0B5DD007249F5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12B9A1AA0B5DD007249F5 /* main.m */; };
 		2EF12B9E1AA0B5DD007249F5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12B9D1AA0B5DD007249F5 /* AppDelegate.m */; };
@@ -17,6 +18,7 @@
 		2EF12BA61AA0B5DD007249F5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2EF12BA51AA0B5DD007249F5 /* Images.xcassets */; };
 		2EF12BA91AA0B5DD007249F5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EF12BA71AA0B5DD007249F5 /* LaunchScreen.xib */; };
 		2EF12BB51AA0B5DD007249F5 /* BiblioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF12BB41AA0B5DD007249F5 /* BiblioTests.m */; };
+		33AED37F1AA89AEC006880C3 /* Utilisateur.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AED37E1AA89AEC006880C3 /* Utilisateur.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 		2E2E919E1AA0FD6A00414E1F /* ConnectionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionHelper.h; sourceTree = "<group>"; };
 		2E2E919F1AA0FD6A00414E1F /* ConnectionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionHelper.m; sourceTree = "<group>"; };
 		2E2E91A01AA0FD6A00414E1F /* Constante.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constante.h; sourceTree = "<group>"; };
+		2E65BA621AA89AFD00617E50 /* Authent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authent.h; sourceTree = "<group>"; };
+		2E65BA631AA89AFD00617E50 /* Authent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Authent.m; sourceTree = "<group>"; };
 		2EEDCAE51AA86D78006E93A5 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoViewController.h; path = Views/DemoViewController.h; sourceTree = "<group>"; };
 		2EEDCAE61AA86D78006E93A5 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoViewController.m; path = Views/DemoViewController.m; sourceTree = "<group>"; };
 		2EF12B951AA0B5DD007249F5 /* Biblio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Biblio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,8 @@
 		2EF12BAE1AA0B5DD007249F5 /* BiblioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BiblioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EF12BB31AA0B5DD007249F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2EF12BB41AA0B5DD007249F5 /* BiblioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BiblioTests.m; sourceTree = "<group>"; };
+		33AED37D1AA89AEC006880C3 /* Utilisateur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilisateur.h; sourceTree = "<group>"; };
+		33AED37E1AA89AEC006880C3 /* Utilisateur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilisateur.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,8 @@
 			children = (
 				2E2E91961AA0F80F00414E1F /* AuthentificationViewController.h */,
 				2E2E91971AA0F80F00414E1F /* AuthentificationViewController.m */,
+				2E65BA621AA89AFD00617E50 /* Authent.h */,
+				2E65BA631AA89AFD00617E50 /* Authent.m */,
 				2E2E919A1AA0FA2F00414E1F /* CreationUtilisateurViewController.h */,
 				2E2E919B1AA0FA2F00414E1F /* CreationUtilisateurViewController.m */,
 			);
@@ -94,6 +102,8 @@
 		2EF12B8C1AA0B5DD007249F5 = {
 			isa = PBXGroup;
 			children = (
+				33AED37D1AA89AEC006880C3 /* Utilisateur.h */,
+				33AED37E1AA89AEC006880C3 /* Utilisateur.m */,
 				2EF12B971AA0B5DD007249F5 /* Biblio */,
 				2EF12BB11AA0B5DD007249F5 /* BiblioTests */,
 				2EF12B961AA0B5DD007249F5 /* Products */,
@@ -256,7 +266,9 @@
 				2EF12B9E1AA0B5DD007249F5 /* AppDelegate.m in Sources */,
 				2E2E91981AA0F80F00414E1F /* AuthentificationViewController.m in Sources */,
 				2EEDCAE71AA86D78006E93A5 /* DemoViewController.m in Sources */,
+				2E65BA641AA89AFD00617E50 /* Authent.m in Sources */,
 				2EF12B9B1AA0B5DD007249F5 /* main.m in Sources */,
+				33AED37F1AA89AEC006880C3 /* Utilisateur.m in Sources */,
 				2E2E91A11AA0FD6A00414E1F /* ConnectionHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
