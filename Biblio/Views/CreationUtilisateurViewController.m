@@ -7,6 +7,9 @@
 //
 
 #import "CreationUtilisateurViewController.h"
+#import "Constante.h"
+#import "Utilisateur.h"
+#import "ConnectionHelper.h"
 
 @interface CreationUtilisateurViewController (){
     IBOutlet UILabel *lTitle;
@@ -44,6 +47,65 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)createUser{
+    // initialisation de l'URL qui va etre appelée.
+    NSURL * url=[NSURL URLWithString:[NSString stringWithFormat:@"%@/user", kAdressServer]];
+    // initialisation de la requète d'appel du serveur
+    NSMutableURLRequest * request= [NSMutableURLRequest requestWithURL:url];
+    // définition du type de méthode envoyée
+    [request setHTTPMethod:@"PUT"];
+    // ajout des headers à la requète
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"Basic aXNmYTppc2ZhMjAxNQ==" forHTTPHeaderField:@"Authorization"];
+    // body
+    // login = ident
+    Utilisateur * user = [[Utilisateur alloc] init];
+    user.ident = login.text;
+    user.firstname = prenom.text;
+    user.lastname = nom.text;
+    user.pass = mdp.text;
+    user.isAdmin = false; // ou 0
+    user.isActif = 0;
+    NSError *error;
+    
+    
+    NSDictionary * dico = @{@"id":login.text,@"firstname":prenom.text,@"lastname":nom.text,
+                            @"pass":mdp.text,@"isAdmin":@FALSE,@"isActif":@TRUE};
+
+    
+    NSData * dataToSend = [NSJSONSerialization dataWithJSONObject:dico options:NSUTF8StringEncoding error:&error];
+    [request setHTTPBody:dataToSend];
+
+    ConnectionHelper * cHelper= [[ConnectionHelper alloc] initWithRequest:request];
+    
+    //succes
+    
+    [cHelper setSuccessBlock:^{
+        NSLog(@"c'est ok!!!!!");
+    
+    }];
+    
+    //
+    [cHelper setFailureBlock:^{
+        NSLog(@"failed !!!!!");
+        
+    }];
+    
+    [cHelper start];
+
+}
+
+-(IBAction) provisoir :(id)sender {
+    
+    
+    [self createUser];
+}
+
+
+
+
 
 /*
 #pragma mark - Navigation
