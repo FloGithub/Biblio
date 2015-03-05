@@ -54,5 +54,14 @@
     // Pass the selected object to the new view controller.
 }
 */
+-(IBAction) onClick1: (id) sender {
+    //NSString *chaine
+    NSLog(@"User clicked %@", sender);
+    //on teste si les valeurs des deux champs *mdp et *tCMdp sont les mêmes
+    //sinon on renvois un message d'erreur
+    if([mdp.text isEqualToString:tCMdp.text])
+        NSLog (@"password identiques ");
+        else NSLog (@" les deux password sont différents");
+}
 
 @end
