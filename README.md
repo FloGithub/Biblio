@@ -3,4 +3,4 @@
 #just a try
 
 
-c'est un frojet de S2IFA
+c'est un projet de S2IFA
