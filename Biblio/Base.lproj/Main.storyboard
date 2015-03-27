@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="26E-QL-a57" kind="relationship" relationship="rootViewController" id="vlK-7O-LC0"/>
+                        <segue destination="we9-sD-yeh" kind="relationship" relationship="rootViewController" id="z1d-9x-vph"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jnR-wt-Qt9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +97,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qey-5O-FYC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1611" y="-179"/>
+            <point key="canvasLocation" x="688" y="408"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jeO-l8-ScO">
+            <objects>
+                <viewController id="2gz-Qn-Hin" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nU2-0N-yzo"/>
+                        <viewControllerLayoutGuide type="bottom" id="cO2-8U-YPY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xt1-4V-HS8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycv-jr-sHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1505" y="-717"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xY7-b4-1Jc">
@@ -112,36 +130,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fZ-nc-C79">
-                                <rect key="frame" x="314" y="239" width="102" height="30"/>
-                                <state key="normal" title="Liste des livres">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-ft-p6h">
-                                <rect key="frame" x="306" y="301" width="119" height="30"/>
-                                <state key="normal" title="Rendre des livres">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <rect key="frame" x="320" y="240" width="102" height="30"/>
+                                <state key="normal" title="Liste des livres"/>
+                                <connections>
+                                    <segue destination="7GS-eb-602" kind="show" id="uvu-eS-ess"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rh8-WF-Jah">
-                                <rect key="frame" x="289" y="375" width="141" height="30"/>
+                                <rect key="frame" x="300" y="376" width="141" height="30"/>
                                 <state key="normal" title="Emprunter des livres">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2gz-Qn-Hin" kind="show" id="zFD-ul-idd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXZ-9a-v93">
-                                <rect key="frame" x="289" y="455" width="141" height="30"/>
+                                <rect key="frame" x="300" y="455" width="141" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Ajouter un utilisateur">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Wea-Hx-qA8" kind="show" id="Dl1-pS-Xdy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZK-Jn-Jif">
-                                <rect key="frame" x="319" y="540" width="81" height="30"/>
-                                <state key="normal" title="Ajouter livre">
+                                <rect key="frame" x="320" y="528" width="103" height="30"/>
+                                <state key="normal" title="Ajouter un livre">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="9ml-E8-Vgv" kind="show" id="oHf-kv-caQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcI-ft-p6h">
+                                <rect key="frame" x="311" y="307" width="119" height="30"/>
+                                <state key="normal" title="Rendre des livres">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="cmG-wU-wP9" kind="show" id="tuc-t9-bXG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,52 +179,133 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JkS-db-M88" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442" y="-130"/>
+            <point key="canvasLocation" x="1505" y="418"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="sfM-0y-CuK">
+        <!--Creation Livre View Controller-->
+        <scene sceneID="waQ-Je-xR2">
             <objects>
-                <viewController id="26E-QL-a57" sceneMemberID="viewController">
+                <viewController id="cmG-wU-wP9" customClass="CreationLivreViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VW4-1w-He2"/>
-                        <viewControllerLayoutGuide type="bottom" id="voJ-1G-5o0"/>
+                        <viewControllerLayoutGuide type="top" id="xfD-08-hvN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hvr-L1-nKB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bvb-wr-3cx">
+                    <view key="view" contentMode="scaleToFill" id="8MF-NZ-lPk">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56b-fo-pCB">
-                                <rect key="frame" x="305" y="330" width="158" height="30"/>
-                                <state key="normal" title="Page d'authentification">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="we9-sD-yeh" kind="show" id="5N8-l1-w3N"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-kO-nbB">
-                                <rect key="frame" x="273" y="415" width="222" height="30"/>
-                                <state key="normal" title="Page de création d'un utilisateur">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Wea-Hx-qA8" kind="show" id="KL2-Nd-szx"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Page temporaire en attendant le développement de la tâche &quot;Menu&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxa-2D-860">
-                                <rect key="frame" x="123" y="200" width="522" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Formulaire d'ajout d'un livre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4A-34-tYT">
+                                <rect key="frame" x="205" y="115" width="213" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lkm-yv-XfH">
+                                <rect key="frame" x="107" y="268" width="34" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMe-Oh-x6j">
+                                <rect key="frame" x="205" y="311" width="113" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTc-Vc-hSi">
+                                <rect key="frame" x="99" y="373" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Couverture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWR-SW-442">
+                                <rect key="frame" x="99" y="556" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="331" placeholderIntrinsicHeight="93" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJb-gE-5LV">
+                                <rect key="frame" x="205" y="373" width="331" height="93"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.79999999999999982" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syV-LO-n6a">
+                                <rect key="frame" x="248" y="552" width="51" height="30"/>
+                                <state key="normal" title="Joindre">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HcF-mN-fuF">
+                                <rect key="frame" x="248" y="644" width="112" height="71"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auteur" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTF-Ap-ugx">
+                                <rect key="frame" x="99" y="315" width="51" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-ql-14x">
+                                <rect key="frame" x="205" y="268" width="113" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ukm-Xk-Zlm"/>
+                    <connections>
+                        <outlet property="btnJoindre" destination="syV-LO-n6a" id="wjb-Jm-Yoy"/>
+                        <outlet property="btnValider" destination="HcF-mN-fuF" id="SBw-iE-ub4"/>
+                        <outlet property="lblAuteur" destination="WTF-Ap-ugx" id="8Y2-LZ-Ysa"/>
+                        <outlet property="lblCouverture" destination="SWR-SW-442" id="Pd5-iE-j4D"/>
+                        <outlet property="lblDescription" destination="FTc-Vc-hSi" id="Ai4-u7-Ru0"/>
+                        <outlet property="lblForm" destination="Z4A-34-tYT" id="59V-SE-h34"/>
+                        <outlet property="lblTitle" destination="Lkm-yv-XfH" id="hFL-QA-ZyD"/>
+                        <outlet property="txtAuteur" destination="OMe-Oh-x6j" id="Opx-EM-ZMJ"/>
+                        <outlet property="txtDescription" destination="TJb-gE-5LV" id="Ewy-oN-1nE"/>
+                        <outlet property="txtTitre" destination="nfd-ql-14x" id="hvW-in-1dE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qYV-do-ZRA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTC-hP-7jr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="408"/>
+            <point key="canvasLocation" x="2371" y="-717"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zjc-3b-A3B">
+            <objects>
+                <viewController id="7GS-eb-602" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k8Z-8I-WSl"/>
+                        <viewControllerLayoutGuide type="bottom" id="DbP-6V-6y3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lRZ-Us-PBw">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hmY-sz-Ps7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IXF-9n-vfq">
+            <objects>
+                <viewController id="9ml-E8-Vgv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yKz-cG-u1Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="b3U-ne-GBA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5jZ-Ru-Ko4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1J-o8-qVk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2371" y="1579"/>
         </scene>
         <!--Creation Utilisateur View Controller-->
         <scene sceneID="LW1-UD-FtB">
@@ -226,11 +337,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-eE-5Yl">
-                                <rect key="frame" x="254" y="133" width="139" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-eY-hs1">
                                 <rect key="frame" x="254" y="209" width="145" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -278,6 +384,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6e-eE-5Yl">
+                                <rect key="frame" x="254" y="133" width="139" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -298,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUQ-8P-XW4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1611" y="918"/>
+            <point key="canvasLocation" x="1505" y="1579"/>
         </scene>
     </scenes>
 </document>
