@@ -81,8 +81,12 @@
     [request setHTTPBody:dataToSend];
     
     ConnectionHelper * connection = [[ConnectionHelper alloc] initWithRequest:request];
-    
+    __weak ConnectionHelper * connectionRespponse = connection;
     [connection setSuccessBlock:^{
+        NSData *data = connectionRespponse.responseData;
+        
+        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"authentification data : %@", string);
         NSLog(@"OK!");
     }];
     

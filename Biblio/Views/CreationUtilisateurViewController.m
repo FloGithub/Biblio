@@ -67,30 +67,38 @@
     user.lastname = nom.text;
     user.pass = mdp.text;
     user.isAdmin = false; // ou 0
-    user.isActif = 0;
+    //user.isActif = 0;
     NSError *error;
     
     
     NSDictionary * dico = @{@"id":login.text,@"firstname":prenom.text,@"lastname":nom.text,
-                            @"pass":mdp.text,@"isAdmin":@FALSE,@"isActif":@TRUE};
+                            @"pass":mdp.text,@"admin":@FALSE};
 
     
     NSData * dataToSend = [NSJSONSerialization dataWithJSONObject:dico options:NSUTF8StringEncoding error:&error];
     [request setHTTPBody:dataToSend];
 
     ConnectionHelper * cHelper= [[ConnectionHelper alloc] initWithRequest:request];
-    
+    __weak ConnectionHelper * connectionRespponse = cHelper;
     //succes
+    
+    
     
     [cHelper setSuccessBlock:^{
         NSLog(@"c'est ok!!!!!");
-    
+        NSData *data = connectionRespponse.responseData;
+        
+        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"creation data : %@", string);
     }];
     
     //
     [cHelper setFailureBlock:^{
         NSLog(@"failed !!!!!");
+        NSData *data = connectionRespponse.responseData;
         
+        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(@"creation data : %@", string);
     }];
     
     [cHelper start];
